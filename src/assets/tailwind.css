@@ -1,0 +1,39 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer {
+    @font-face {
+        font-family: 'Lato';
+        font-weight: 400;
+        src: url(./fonts/Lato-Regular.ttf);
+    }
+    @font-face {
+        font-family: 'Lato';
+        font-weight: 700;
+        src: url(./fonts/Lato-Bold.ttf);
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-weight: 300;
+        src: url(./fonts/Nunito-Light.ttf);
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-weight: 500;
+        src: url(./fonts/Nunito-Medium.ttf);
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-weight: 600;
+        src: url(./fonts/Nunito-SemiBold.ttf);
+    }
+    @font-face {
+        font-family: 'Nunito';
+        font-weight: 700;
+        src: url(./fonts/Nunito-Bold.ttf);
+    }
+}
+  
