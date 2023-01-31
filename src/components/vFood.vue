@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-row px-6 font-nunito font-normal text-base h-12 leading-[3] relative">
-        <span class="basis-2/5 grow">{{ foodTotals.food.name }}</span>
+        <span class="basis-2/5 grow">{{ foodTotals.food.food.name }}</span>
         <span class="basis-1/5 shrink">{{ foodTotals.food.quantity }}g</span>
         <span class="basis-1/5 shrink">{{ foodTotals.totals.calories }}kcal</span>
         <!-- <div class="basis-1/5 grow flex flex-row justify-between"> -->
@@ -17,7 +17,7 @@
                 <span class="font-light">L</span>
                 <span>{{foodTotals.totals.macros.lip ?? 0}}g</span>
             </div>
-            <macros-bar class="absolute bottom-2" :macros="foodTotals.food.macros">
+            <macros-bar class="absolute bottom-2" :macros="foodTotals.food.food.macros">
     
             </macros-bar>
         </div>

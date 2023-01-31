@@ -1,4 +1,4 @@
-import type { Meal, MealTotal, FoodTotal, Food, DayTotal } from '@/assets/interfaces';
+import type { Meal, MealTotal, FoodTotal, FoodOnMeal, DayTotal } from '@/assets/interfaces';
 import { defineStore } from 'pinia'
 
 export const useMealsStore = defineStore({
@@ -8,15 +8,15 @@ export const useMealsStore = defineStore({
         dayTotal: {} as DayTotal 
     }),
     actions: {
-        getFoodTotals(food: Food) {
-            const calories = food.quantity * food.caloriesPerHundred / 100;
+        getFoodTotals(eachFood: FoodOnMeal) {
+            const calories = eachFood.quantity * eachFood.food.caloriesPerHundred / 100;
             const macros = {
-                cho: food.quantity * food.macros.cho,
-                ptn: food.quantity * food.macros.ptn,
-                lip: food.quantity * food.macros.lip,
+                cho: eachFood.quantity * eachFood.food.macros.cho,
+                ptn: eachFood.quantity * eachFood.food.macros.ptn,
+                lip: eachFood.quantity * eachFood.food.macros.lip,
             }
             return {
-                food,
+                food: eachFood,
                 totals: {
                     calories,
                     macros
@@ -81,8 +81,8 @@ export const useMealsStore = defineStore({
         },
         setMeals(meals: Meal[]) {
             this.mealsTotals = meals.map((meal) => {
-                const foodTotals = meal.map((food) => {
-                    return this.getFoodTotals(food)
+                const foodTotals = meal.map((eachFood) => {
+                    return this.getFoodTotals(eachFood)
                 })
                 return this.getMealTotal(foodTotals, meal)
             })

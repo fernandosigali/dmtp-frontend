@@ -47,13 +47,14 @@ module.exports = {
     fontFamily: {
       lato: ['Lato', 'sans-serif'],
       nunito: ['Nunito', 'sans-serif'],
-      display: ['Comfortaa']
+      display: ['Comfortaa', 'cursive']
     },
     extend: {
       spacing: {
         icon: "1.5rem",
         'icon-title': "0.5rem",
         'icon-subtitle': '2rem',
+        'plus-button': '6vh'
       },
       transitionProperty: {
         height: 'height'
@@ -61,6 +62,12 @@ module.exports = {
       boxShadow: {
         default: '0px 2px 8px -2px rgba(51,15,3,0.1)'
         // default: '0px 4 4 4 rgba(255,255,255,1)'
+      },
+      fontSize: {
+        'plus-button': '6vh'
+      },
+      lineHeight: {
+        'plus-button': '6vh'
       }
     },
   },

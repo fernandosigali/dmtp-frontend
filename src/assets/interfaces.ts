@@ -10,21 +10,29 @@ export interface MacronutrientsQuantity {
 }
 
 export interface Food {
+    id: number,
     name: string,
-    quantity: number,
     caloriesPerHundred: number,
     macros: MacronutrientsQuantity
 }
 
+export interface FoodOnMeal { 
+    food: Food, 
+    quantity: number 
+}
+
 export interface FoodTotal {
-    food: Food,
+    food: FoodOnMeal,
     totals: {
         calories: number,
         macros: MacronutrientsQuantity
     }
 }
 
-export interface Meal extends Array<Food>{}
+export interface Meal extends Array<{
+    food: Food,
+    quantity: number,
+}> { }
 
 export interface MealTotal {
     meal: Meal,
