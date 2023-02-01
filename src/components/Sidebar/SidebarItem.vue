@@ -1,7 +1,7 @@
 <template>
     <div class="pl-8 w-full h-fit">
         <div class="h-10 flex items-center text-h10">
-            <IconTooling class="h-icon w-icon"/>
+            <component :is="iconComponent" class="h-icon w-icon"/>
             <span class="font-lato text-xl font-normal text-h11 pl-icon-title cursor-pointer transition-transform hover:scale-105"  @click="toogleOption()">
                 {{ title }}
             </span>
@@ -23,6 +23,7 @@
 <script setup lang="ts">
 
 import IconTooling from '../icons/IconTooling.vue';
+
 import { useSidebarStore } from '@/stores/sidebarStore';
 import { ref } from 'vue';
 import type { Subtitle } from '@/assets/interfaces'
@@ -30,13 +31,15 @@ import type { Subtitle } from '@/assets/interfaces'
 
 const sidebarStore = useSidebarStore()
 
-const props = defineProps({
-  title: String,
-  subtitles: {
-    type: Array<Subtitle>,
-    default: []
-  }
+const props = withDefaults(defineProps<{
+    title?: string, 
+    iconComponent?: any,
+    subtitles: Array<Subtitle>
+}> (), {
+  title: '',
 })
+
+console.log(props)
 
 const closed = ref(false);
 const toogleOption = () => {

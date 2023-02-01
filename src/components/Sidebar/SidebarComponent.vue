@@ -4,7 +4,7 @@
             LOGO
         </div>
         <div class="py-5">
-            <sidebar-item v-for="menuItem in menuItens" :title="menuItem.title" :subtitles="menuItem.subtitles"></sidebar-item>
+            <sidebar-item v-for="menuItem in menuItens" :title="menuItem.title" :subtitles="menuItem.subtitles" :icon-component="menuItem.iconComponent"></sidebar-item>
         </div>
     </div>
 </template>
@@ -12,11 +12,17 @@
 <script setup lang="ts">
 
 import SidebarItem from './SidebarItem.vue';
-import { reactive } from 'vue';
+import WeightIcon from '../icons/WeightIcon.vue';
+import MealIcon from '../icons/MealIcon.vue';
+import { markRaw, reactive } from 'vue';
+
+const mealIcon = markRaw(MealIcon);
+const weightIcon = markRaw(WeightIcon);
 
 const menuItens = reactive([
     {
         title: "Dieta",
+        iconComponent: mealIcon,
         subtitles: [
             {
                 name: 'Refeições',
@@ -30,6 +36,7 @@ const menuItens = reactive([
     },
     {
         title: "Musculação",
+        iconComponent: weightIcon,
         subtitles: [
             {
                 name: 'Treinos',
@@ -42,4 +49,5 @@ const menuItens = reactive([
         ] 
     },
 ])
+
 </script>

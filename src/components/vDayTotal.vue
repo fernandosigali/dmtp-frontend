@@ -1,6 +1,6 @@
 <template>
     <div class="px-24 w-full h-fit">
-        <div class="flex flex-row px-6 font-nunito font-normal text-base h-12 leading-[3] relative rounded bg-h-3">
+        <div class="flex flex-row px-6 font-nunito font-normal text-base h-12 leading-[3] relative rounded bg-h-3 shadow-default">
             <span class="basis-2/5 grow font-semibold">Total diário</span>
             <span class="basis-1/5 shrink font-semibold">{{ dayTotal.quantity }}g</span>
             <span class="basis-1/5 shrink font-semibold">{{ dayTotal.calories }}kcal</span>
