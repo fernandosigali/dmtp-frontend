@@ -60,15 +60,15 @@ module.exports = {
         height: 'height'
       },
       boxShadow: {
-        default: '0px 2px 8px -2px rgba(26,7,54,0.2)'
-        // default: '0px 4 4 4 rgba(255,255,255,1)'
+        default: '0px 8px 8px -8px rgba(26,7,54,0.2)',
+        'radio-button': '0px 0px 0px 2px',
       },
       fontSize: {
         'plus-button': '6vh'
       },
       lineHeight: {
         'plus-button': '6vh'
-      }
+      },
     },
   },
   plugins: [],

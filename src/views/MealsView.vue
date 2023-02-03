@@ -58,7 +58,6 @@ const food_3: Food = {
 }
 
 
-
 const foods = [
     { food: food_1, quantity: 150 },
     { food: food_2, quantity: 200 },

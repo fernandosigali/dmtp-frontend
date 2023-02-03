@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import WorkoutView from '@/views/WorkoutView.vue'
 import MealsView from '@/views/MealsView.vue'
+import MacrosView from '@/views/MacrosView.vue'
 
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
           path: 'meals',
           name: 'meals',
           component: MealsView,
+        },
+        {
+          path: 'macros',
+          name: 'macros',
+          component: MacrosView,
         },
     ]
     },

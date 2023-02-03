@@ -3,8 +3,8 @@
     <clipped-tag 
         :width="200" 
         :height="40" 
-        :xDirection="'right'" 
-        :yDirection="'up'" 
+        xDirection="'right'" 
+        yDirection="'up'" 
         class="rounded-t-sm flex justify-start items-center"
     >
         <span class="font-lato font-normal text-xl px-6">
