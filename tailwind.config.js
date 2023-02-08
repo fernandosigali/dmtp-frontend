@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       'h-5': '#FDF9FF',
       'h-4': '#FBF0FF',
+      'h-3.5': '#FAEAFF',
       'h-3': '#F9E5FF',
       'h-2': '#EDCEF7',
       'h-1': '#EDC4FF',
@@ -42,7 +43,8 @@ module.exports = {
       'cho': '#59B262',
       'ptn': '#4977AD',
       'lip': '#CA5151',
-      'rest': '#C4E20C'
+      'rest': '#C4E20C',
+      'transparent': '#00000000'
     },
     fontFamily: {
       lato: ['Lato', 'sans-serif'],
@@ -50,11 +52,18 @@ module.exports = {
       display: ['Comfortaa', 'cursive']
     },
     extend: {
+      gridTemplateColumns: {
+        table: 'minmax(0,300px) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr)'
+      },
+      gridTemplateRows: {
+        table: 'minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr)'
+      },
       spacing: {
         icon: "1.5rem",
         'icon-title': "0.5rem",
         'icon-subtitle': '2rem',
-        'plus-button': '6vh'
+        'plus-button': '6vh',
+        'table-line': '1px'
       },
       transitionProperty: {
         height: 'height'
