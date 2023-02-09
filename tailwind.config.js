@@ -53,7 +53,7 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        table: 'minmax(0,300px) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr)'
+        table: 'minmax(0,300px) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(48px,1fr)'
       },
       gridTemplateRows: {
         table: 'minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr)'
