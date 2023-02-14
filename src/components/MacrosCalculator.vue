@@ -36,29 +36,29 @@
             <div class="col-start-1 row-start-3 self-center justify-self-end pr-4">Proporção(%)</div>
             <div class="col-start-2 row-start-3 bg-h-2"></div>
             <div class="col-start-3 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'RAT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'RAT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="ratChoRef"
-                    @input="ratChoRef = ($event.target as HTMLInputElement)?.value; addNewValue('cho')"
-                    :disabled="macroSelectedRef != 'RAT'"
+                    :value="macrosCalculatorStore.ratioCho"
+                    @input="macrosCalculatorStore.ratioCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho')"
+                    :disabled="macrosCalculatorStore.selectedMode != 'RAT'"
                 >            
             </div>
             <div class="col-start-4 row-start-3 bg-h-2"></div>
             <div class="col-start-5 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'RAT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'RAT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="ratPtnRef"
-                    @input=" ratPtnRef = ($event.target as HTMLInputElement)?.value; addNewValue('ptn') "
-                    :disabled="macroSelectedRef != 'RAT'"
+                    :value="macrosCalculatorStore.ratioPtn"
+                    @input=" macrosCalculatorStore.ratioPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'RAT'"
                 >                        
             </div>
             <div class="col-start-6 row-start-3 bg-h-2"></div>
             <div class="col-start-7 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'RAT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'RAT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="ratLipRef"
-                    @input=" ratLipRef = ($event.target as HTMLInputElement)?.value; addNewValue('lip') "
-                    :disabled="macroSelectedRef != 'RAT'"
+                    :value="macrosCalculatorStore.ratioLip"
+                    @input=" macrosCalculatorStore.ratioLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'RAT'"
                 >
             </div>
             <div class="col-start-8 row-start-3 bg-h-2"></div>
@@ -79,29 +79,29 @@
             <div class="col-start-1 row-start-5 self-center justify-self-end pr-4">Quantidade(g)</div>
             <div class="col-start-2 row-start-5 bg-h-2"></div>
             <div class="col-start-3 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QTT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QTT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qqtChoRef"
-                    @input=" qqtChoRef = ($event.target as HTMLInputElement)?.value; addNewValue('cho') "
-                    :disabled="macroSelectedRef != 'QTT'"
+                    :value="macrosCalculatorStore.quantityCho"
+                    @input=" macrosCalculatorStore.quantityCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QTT'"
                 >            
             </div>
             <div class="col-start-4 row-start-5 bg-h-2"></div>
             <div class="col-start-5 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QTT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QTT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qqtPtnRef"
-                    @input=" qqtPtnRef = ($event.target as HTMLInputElement)?.value; addNewValue('ptn') "
-                    :disabled="macroSelectedRef != 'QTT'"
+                    :value="macrosCalculatorStore.quantityPtn"
+                    @input=" macrosCalculatorStore.quantityPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QTT'"
                     >
             </div>
             <div class="col-start-6 row-start-5 bg-h-2"></div>
             <div class="col-start-7 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QTT' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QTT' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qqtLipRef"
-                    @input=" qqtLipRef = ($event.target as HTMLInputElement)?.value; addNewValue('lip') "
-                    :disabled="macroSelectedRef != 'QTT'"
+                    :value="macrosCalculatorStore.quantityLip"
+                    @input=" macrosCalculatorStore.quantityLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QTT'"
                 >
             </div>
             <div class="col-start-8 row-start-5 bg-h-2"></div>
@@ -122,29 +122,29 @@
             <div class="col-start-1 row-start-7 self-center justify-self-end pr-4">Quantidade por quilograma(g/kg)</div>
             <div class="col-start-2 row-start-7 bg-h-2"></div>
             <div class="col-start-3 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QPK' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QPK' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qpkChoRef"
-                    @input=" qpkChoRef = ($event.target as HTMLInputElement)?.value; addNewValue('cho') "
-                    :disabled="macroSelectedRef != 'QPK'"
+                    :value="macrosCalculatorStore.quantityPerKiloCho"
+                    @input=" macrosCalculatorStore.quantityPerKiloCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QPK'"
                 >
             </div>
             <div class="col-start-4 row-start-7 bg-h-2"></div>
             <div class="col-start-5 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QPK' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QPK' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qpkPtnRef"
-                    @input=" qpkPtnRef = ($event.target as HTMLInputElement)?.value; addNewValue('ptn') "
-                    :disabled="macroSelectedRef != 'QPK'"
+                    :value="macrosCalculatorStore.quantityPerKiloPtn"
+                    @input=" macrosCalculatorStore.quantityPerKiloPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QPK'"
                 >
             </div>
             <div class="col-start-6 row-start-7 bg-h-2"></div>
             <div class="col-start-7 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macroSelectedRef == 'QPK' }">
+                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'QPK' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
-                    :value="qpkLipRef"
-                    @input=" qpkLipRef = ($event.target as HTMLInputElement)?.value; addNewValue('lip') "
-                    :disabled="macroSelectedRef != 'QPK'"
+                    :value="macrosCalculatorStore.quantityPerKiloLip"
+                    @input=" macrosCalculatorStore.quantityPerKiloLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
+                    :disabled="macrosCalculatorStore.selectedMode != 'QPK'"
                 >
             </div>
             <div class="col-start-8 row-start-7 bg-h-2"></div>
@@ -176,38 +176,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from 'vue';
+
 import VStyledRadioButton from './vStyledRadioButton.vue';
+import { useMacrosCalculatorStore } from '@/stores/macrosCalculatorStore';
 
-const macroSelectedRef = ref('')
+const macrosCalculatorStore = useMacrosCalculatorStore()
 
-const ratChoRef = ref('')
-const ratPtnRef = ref('')
-const ratLipRef = ref('')
-const qqtChoRef = ref('')
-const qqtPtnRef = ref('')
-const qqtLipRef = ref('')
-const qpkChoRef = ref('')
-const qpkPtnRef = ref('')
-const qpkLipRef = ref('')
 
-let lastUpdates: Set<string> = new Set()
-
-const changeMacroSelected = (macroSelected: string) => {
-    macroSelectedRef.value = macroSelected
-    console.log(macroSelectedRef.value)
+const updateLastModifieds = (updatedProperty: string) => {
+    macrosCalculatorStore.updateLastModifieds(updatedProperty)
 }
 
-const addNewValue = (macro: string) => {
-    console.log(macro)
-}
-
-const emitFirstInput = () => {
-    qqtPtnRef.value = 'oi'
-}
-
-const emitSecondInput = () => {
-    console.log('emiting')
+const changeMacroSelected = (newSelectedMode: string) => {
+    macrosCalculatorStore.changeSelectedMode(newSelectedMode)
 }
 
 </script>

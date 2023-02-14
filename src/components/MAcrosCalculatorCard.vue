@@ -4,12 +4,18 @@
         <span>{{ title }}</span>
     </div>
     <div class="w-full text-right font-lato text-4xl text-h11">
-        <span>{{ value }}</span>
+        <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
+            :value="value"
+            @input="$emit('update:value')"
+            :disabled="macrosCalculatorStore.selectedMode != 'QPK'"
+        >
     </div>
 </div>
 </template>
 
 <script setup lang="ts">
+
+import { useMacrosCalculatorStore } from '@/stores/macrosCalculatorStore';
 
 const props = withDefaults(defineProps<{
     title: string,
@@ -18,6 +24,11 @@ const props = withDefaults(defineProps<{
     title: 'Title',
     value: 'Value'
 })
+
+const macrosCalculatorStore = useMacrosCalculatorStore()
+
+const emit = defineEmits(['update:value'])
+
 
 </script>
 
