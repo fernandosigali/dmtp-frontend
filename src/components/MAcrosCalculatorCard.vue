@@ -6,8 +6,7 @@
     <div class="w-full text-right font-lato text-4xl text-h11">
         <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
             :value="value"
-            @input="$emit('update:value')"
-            :disabled="macrosCalculatorStore.selectedMode != 'QPK'"
+            @input="$emit('update:value', ($event.target as HTMLInputElement)?.value)"
         >
     </div>
 </div>

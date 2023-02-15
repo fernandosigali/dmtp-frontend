@@ -5,13 +5,13 @@
         title="Peso (kg)" 
         class="col-start-4 col-span-3 row-start-2 place-self-start"
         :value="macrosCalculatorStore.weight"
-        @update:value=""    
+        @update:value="newWeight => updateWeight(newWeight)"    
     ></card>
     <card 
         title="Calorias (kcal)" 
         class="col-start-7 col-span-3 row-start-2 place-self-end self-start"
         :value="macrosCalculatorStore.calories"
-        @update:value=""
+        @update:value="newCalories => updateCalories(newCalories)"    
     ></card>
 
     <macros-calculator 
@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import Card from '@/components/MAcrosCalculatorCard.vue';
+import Card from '@/components/MacrosCalculatorCard.vue'
 import MacrosCalculator from '@/components/MacrosCalculator.vue';
 import { useMacrosCalculatorStore } from '@/stores/macrosCalculatorStore';
 import { ref, type Ref } from 'vue';
@@ -39,5 +39,15 @@ const updateLastModifieds = (updatedProperty: string) => {
 const updateModeSelected = (newModeSelected: string) => {
     macrosCalculatorStore.changeSelectedMode(newModeSelected)
 }
+
+const updateWeight = (weight: string) => {
+    macrosCalculatorStore.updateWeight(weight)
+}
+
+const updateCalories = (calories: string) => {
+    macrosCalculatorStore.updateCalories(calories)
+}
+
+
 
 </script>
