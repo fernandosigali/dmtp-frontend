@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full flex flex-col gap-8 py-16 bg-g0">
+    <div class="w-full h-full flex flex-col gap-8 py-16">
         <v-meal 
             v-for="meal in mealsTotals" 
             :mealTotal="meal">
@@ -7,9 +7,16 @@
         <v-day-total :dayTotal="dayTotal">
 
         </v-day-total>
-        <v-plus-button>
-
+        <v-plus-button
+            @click="openAddMealModal($event)"    
+        >
         </v-plus-button>
+        <v-modal 
+            v-if="addMealModal"
+            @close="closeAddMealModal()"
+            >
+            É os guri
+        </v-modal>
     </div>
 </template>
 
@@ -18,6 +25,7 @@ import type { Meal, MealTotal, Food, DayTotal } from '@/assets/interfaces';
 import vMeal from '@/components/vMeal.vue';
 import vDayTotal from '@/components/vDayTotal.vue';
 import vPlusButton from '@/components/vPlusButton.vue';
+import vModal from '@/components/vBaseModal.vue';
 import { ref } from 'vue';
 import type { Ref } from 'vue'
 import { useMealsStore } from '@/stores/mealsStore';
@@ -58,7 +66,6 @@ const food_3: Food = {
 }
 
 
-
 const foods = [
     { food: food_1, quantity: 150 },
     { food: food_2, quantity: 200 },
@@ -71,7 +78,19 @@ const meals: Meal[] = [
 ]
 
 mealsStore.setMeals(meals)
+
 const mealsTotals: Ref<MealTotal[]> = ref(mealsStore.mealsTotals)
 const dayTotal: Ref<DayTotal> = ref(mealsStore.dayTotal)
+const addMealModal: Ref<boolean> = ref(false)
+
+const openAddMealModal = (event: Event) => {
+    addMealModal.value = true
+}
+
+const closeAddMealModal = () => {
+    addMealModal.value = false
+}
+
+
 
 </script>

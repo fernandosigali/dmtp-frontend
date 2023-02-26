@@ -9,7 +9,9 @@ module.exports = {
     colors: {
       'h-5': '#FDF9FF',
       'h-4': '#FBF0FF',
+      'h-3.5': '#FAEAFF',
       'h-3': '#F9E5FF',
+      'h-2.5': '#F5DFFF',
       'h-2': '#EDCEF7',
       'h-1': '#EDC4FF',
       'h0': '#E7BAFE',
@@ -24,6 +26,7 @@ module.exports = {
       'h9': '#4A188F',
       'h10': '#330F67',
       'h11': '#1A0736',
+      'g-1': '#F9F9F9',
       'g0': '#F3F3F3',
       'g1': '#E6E6E6',
       'g2': '#D9D9D9',
@@ -42,7 +45,9 @@ module.exports = {
       'cho': '#59B262',
       'ptn': '#4977AD',
       'lip': '#CA5151',
-      'rest': '#C4E20C'
+      'rest': '#C4E20C',
+      'transparent': '#00000000',
+      'backdrop': '#0000009a'
     },
     fontFamily: {
       lato: ['Lato', 'sans-serif'],
@@ -50,25 +55,32 @@ module.exports = {
       display: ['Comfortaa', 'cursive']
     },
     extend: {
+      gridTemplateColumns: {
+        table: 'minmax(0,300px) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(48px,1fr)'
+      },
+      gridTemplateRows: {
+        table: 'minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr) 1px minmax(48px,1fr)'
+      },
       spacing: {
         icon: "1.5rem",
         'icon-title': "0.5rem",
         'icon-subtitle': '2rem',
-        'plus-button': '6vh'
+        'plus-button': '6vh',
+        'table-line': '1px'
       },
       transitionProperty: {
         height: 'height'
       },
       boxShadow: {
-        default: '0px 2px 8px -2px rgba(26,7,54,0.2)'
-        // default: '0px 4 4 4 rgba(255,255,255,1)'
+        default: '0px 8px 8px -8px rgba(26,7,54,0.2)',
+        'radio-button': '0px 0px 0px 2px',
       },
       fontSize: {
         'plus-button': '6vh'
       },
       lineHeight: {
         'plus-button': '6vh'
-      }
+      },
     },
   },
   plugins: [],
