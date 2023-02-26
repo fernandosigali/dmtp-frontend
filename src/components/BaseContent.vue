@@ -1,6 +1,6 @@
 <template>
-    <div class="relative grow bg-g0 pt-10">
-        <clipped-tag :height="40" :width="120" :XDirection="'right'" :YDirection="'down'" class="absolute top-0 left-0">
+    <div class="relative grow bg-g-1 pt-10">
+        <clipped-tag :height="40" :width="120" :XDirection="'right'" :YDirection="'down'" class="absolute top-0 left-0 bg-h-3">
             <div class="w-full h-full flex justify-center items-center">
                 <Transition mode="out-in" name="fade-in">
                     <span class="font-nunito text-sm font-bold" :key="sidebarStore.currentOption">
@@ -9,7 +9,7 @@
                 </Transition>
             </div>
         </clipped-tag>
-        <clipped-tag :height="40" :width="160" :XDirection="'left'" :YDirection="'down'" class="absolute top-0 right-0">
+        <clipped-tag :height="40" :width="160" :XDirection="'left'" :YDirection="'down'" class="absolute top-0 right-0 bg-h-3">
             <div class="w-full h-full flex justify-center items-center">
                 <span class="font-nunito text-sm font-bold">
                     FERNANDO

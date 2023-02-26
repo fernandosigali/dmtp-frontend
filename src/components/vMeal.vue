@@ -5,13 +5,13 @@
         :height="40" 
         xDirection="'right'" 
         yDirection="'up'" 
-        class="rounded-t-sm flex justify-start items-center"
+        class="rounded-t-sm flex justify-start items-center bg-h-4"
     >
         <span class="font-lato font-normal text-xl px-6">
             Almoço
         </span>
     </clipped-tag>
-    <div class="w-full h-fit bg-h-3 flex flex-col rounded-r-sm rounded-bl-sm shadow-default">
+    <div class="w-full h-fit bg-gradient-to-b from-h-4 to-h-3 flex flex-col rounded-r-sm rounded-bl-sm shadow-default">
         <v-food 
             v-for="food in foodsTotalsRef" 
             :foodTotals="food">

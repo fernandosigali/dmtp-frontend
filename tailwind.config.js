@@ -11,6 +11,7 @@ module.exports = {
       'h-4': '#FBF0FF',
       'h-3.5': '#FAEAFF',
       'h-3': '#F9E5FF',
+      'h-2.5': '#F5DFFF',
       'h-2': '#EDCEF7',
       'h-1': '#EDC4FF',
       'h0': '#E7BAFE',
@@ -25,6 +26,7 @@ module.exports = {
       'h9': '#4A188F',
       'h10': '#330F67',
       'h11': '#1A0736',
+      'g-1': '#F9F9F9',
       'g0': '#F3F3F3',
       'g1': '#E6E6E6',
       'g2': '#D9D9D9',
@@ -44,7 +46,8 @@ module.exports = {
       'ptn': '#4977AD',
       'lip': '#CA5151',
       'rest': '#C4E20C',
-      'transparent': '#00000000'
+      'transparent': '#00000000',
+      'backdrop': '#0000009a'
     },
     fontFamily: {
       lato: ['Lato', 'sans-serif'],

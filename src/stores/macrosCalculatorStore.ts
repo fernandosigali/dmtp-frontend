@@ -87,7 +87,7 @@ export const useMacrosCalculatorStore = defineStore({
         this.quantityPerKiloPtn = (parseFloat(this.quantityPtn)/parseFloat(this.weight) || null)?.toFixed(2) ?? ''
         this.quantityPerKiloLip = (parseFloat(this.quantityLip)/parseFloat(this.weight) || null)?.toFixed(2) ?? ''
       } else if (this.selectedMode === 'quantityPerKilogram') {
-        this.calories = (parseFloat(this.weight)*(parseFloat(this.quantityPerKiloCho)*this.choCalories + parseFloat(this.quantityPerKiloPtn)*this.ptnCalories + parseFloat(this.quantityPerKiloLip)*this.lipCalories) || null)?.toFixed(2) ?? ''
+        this.calories = (parseFloat(this.weight)*(parseFloat(this.quantityPerKiloCho)*this.choCalories + parseFloat(this.quantityPerKiloPtn)*this.ptnCalories + parseFloat(this.quantityPerKiloLip)*this.lipCalories) || null)?.toFixed(0) ?? ''
         this.quantityCho = (parseFloat(this.quantityPerKiloCho)*parseFloat(this.weight) || null)?.toFixed(2) ?? ''
         this.quantityPtn = (parseFloat(this.quantityPerKiloPtn)*parseFloat(this.weight) || null)?.toFixed(2) ?? ''
         this.quantityLip = (parseFloat(this.quantityPerKiloLip)*parseFloat(this.weight) || null)?.toFixed(2) ?? ''

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-h-3" :style="clipClass">
+    <div :style="clipClass">
         <slot></slot>
     </div>
 </template>

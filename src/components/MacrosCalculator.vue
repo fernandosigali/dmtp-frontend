@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full bg-gradient-to-b from-h-5 to-h-4 rounded-sm px-8 py-4 shadow-default">
+    <div class="w-full h-full bg-gradient-to-b from-h-4 to-h-3 rounded-md px-8 py-8 shadow-default">
         <div class="w-full flex gap-28 justify-center font-nunito text-base font-semibold text-h10">
             <v-styled-radio-button group-name="macros-radio-group" label="Proporção" inputId="ratio"
                 @selected="changeMacroSelected('ratio')"></v-styled-radio-button>
@@ -36,7 +36,7 @@
             <div class="col-start-1 row-start-3 self-center justify-self-end pr-4">Proporção (%)</div>
             <div class="col-start-2 row-start-3 bg-h-2"></div>
             <div class="col-start-3 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'ratio' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'ratio' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.ratioCho"
                     @input="macrosCalculatorStore.ratioCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho')"
@@ -45,7 +45,7 @@
             </div>
             <div class="col-start-4 row-start-3 bg-h-2"></div>
             <div class="col-start-5 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'ratio' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'ratio' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.ratioPtn"
                     @input=" macrosCalculatorStore.ratioPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
@@ -54,7 +54,7 @@
             </div>
             <div class="col-start-6 row-start-3 bg-h-2"></div>
             <div class="col-start-7 row-start-3 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'ratio' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'ratio' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.ratioLip"
                     @input=" macrosCalculatorStore.ratioLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
@@ -79,7 +79,7 @@
             <div class="col-start-1 row-start-5 self-center justify-self-end pr-4">Quantidade (g)</div>
             <div class="col-start-2 row-start-5 bg-h-2"></div>
             <div class="col-start-3 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantity' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantity' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityCho"
                     @input=" macrosCalculatorStore.quantityCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho') "
@@ -88,7 +88,7 @@
             </div>
             <div class="col-start-4 row-start-5 bg-h-2"></div>
             <div class="col-start-5 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantity' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantity' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityPtn"
                     @input=" macrosCalculatorStore.quantityPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
@@ -97,7 +97,7 @@
             </div>
             <div class="col-start-6 row-start-5 bg-h-2"></div>
             <div class="col-start-7 row-start-5 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantity' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantity' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityLip"
                     @input=" macrosCalculatorStore.quantityLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
@@ -122,7 +122,7 @@
             <div class="col-start-1 row-start-7 self-center justify-self-end pr-4">Quantidade por quilograma (g/kg)</div>
             <div class="col-start-2 row-start-7 bg-h-2"></div>
             <div class="col-start-3 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityPerKiloCho"
                     @input=" macrosCalculatorStore.quantityPerKiloCho = ($event.target as HTMLInputElement)?.value; updateLastModifieds('cho') "
@@ -131,7 +131,7 @@
             </div>
             <div class="col-start-4 row-start-7 bg-h-2"></div>
             <div class="col-start-5 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityPerKiloPtn"
                     @input=" macrosCalculatorStore.quantityPerKiloPtn = ($event.target as HTMLInputElement)?.value; updateLastModifieds('ptn') "
@@ -140,7 +140,7 @@
             </div>
             <div class="col-start-6 row-start-7 bg-h-2"></div>
             <div class="col-start-7 row-start-7 transition-colors duration-500"
-                :class="{ 'bg-h-3.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
+                :class="{ 'bg-h-2.5': macrosCalculatorStore.selectedMode == 'quantityPerKilogram' }">
                 <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
                     :value="macrosCalculatorStore.quantityPerKiloLip"
                     @input=" macrosCalculatorStore.quantityPerKiloLip = ($event.target as HTMLInputElement)?.value; updateLastModifieds('lip') "
