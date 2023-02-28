@@ -74,6 +74,7 @@ module.exports = {
       boxShadow: {
         default: '0px 8px 8px -8px rgba(26,7,54,0.2)',
         'radio-button': '0px 0px 0px 2px',
+        'select-input': 'inset 0px 2px 8px -4px rgba(26,7,54,0.2)'
       },
       fontSize: {
         'plus-button': '6vh'

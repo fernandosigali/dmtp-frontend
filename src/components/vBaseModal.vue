@@ -5,17 +5,19 @@
                 'bg-transparent': !mounted,
                 'bg-backdrop': (hasBackdrop && mounted)
             }"
-    @click="backdropClick()"
+    @mousedown="backdropMousedownEvent($event)"
+    @mouseup="backdropMouseupEvent($event)"
     >
     <div 
-        class="text-center bg-g-1 h-fit w-fit transition-all"
+        class="text-center bg-transparent h-fit w-fit transition-all"
         :class="{
                     'max-h-0': !mounted,
                     'max-h-full': mounted,
                     'max-w-0': !mounted,
                     'max-w-full': mounted
                 }"
-        @click.stop
+        @mousedown.stop
+        @mouseup="modalContentMouseupEvent($event)"
         >
         <slot>
             
@@ -37,8 +39,22 @@ const props = withDefaults(defineProps<{
 })
 
 const mounted = ref(false)
-console.log('consigo')
+let backdropMousedownOcurred = false;
 const emit = defineEmits(['close'])
+ 
+const backdropMousedownEvent = (event: Event) => {
+    backdropMousedownOcurred = true;
+} 
+
+const modalContentMouseupEvent = (event: Event) => {
+    backdropMousedownOcurred = false;
+}
+ 
+const backdropMouseupEvent = (event: Event) => {
+    if (backdropMousedownOcurred){
+        backdropClick()
+    }
+} 
 
 const backdropClick = () => {
     if (!props.disableClose) {

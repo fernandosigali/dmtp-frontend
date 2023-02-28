@@ -14,8 +14,10 @@
         <v-modal 
             v-if="addMealModal"
             @close="closeAddMealModal()"
-            >
-            É os guri
+        >
+            <add-meal class="h-72 w-[75vw]">
+                
+            </add-meal>
         </v-modal>
     </div>
 </template>
@@ -26,6 +28,7 @@ import vMeal from '@/components/vMeal.vue';
 import vDayTotal from '@/components/vDayTotal.vue';
 import vPlusButton from '@/components/vPlusButton.vue';
 import vModal from '@/components/vBaseModal.vue';
+import addMeal from '@/components/AddMeal.vue';
 import { ref } from 'vue';
 import type { Ref } from 'vue'
 import { useMealsStore } from '@/stores/mealsStore';
@@ -81,7 +84,7 @@ mealsStore.setMeals(meals)
 
 const mealsTotals: Ref<MealTotal[]> = ref(mealsStore.mealsTotals)
 const dayTotal: Ref<DayTotal> = ref(mealsStore.dayTotal)
-const addMealModal: Ref<boolean> = ref(false)
+const addMealModal: Ref<boolean> = ref(true)
 
 const openAddMealModal = (event: Event) => {
     addMealModal.value = true

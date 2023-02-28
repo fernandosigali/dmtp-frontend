@@ -29,10 +29,7 @@ export interface FoodTotal {
     }
 }
 
-export interface Meal extends Array<{
-    food: Food,
-    quantity: number,
-}> { }
+export interface Meal extends Array<FoodOnMeal> { }
 
 export interface MealTotal {
     meal: Meal,

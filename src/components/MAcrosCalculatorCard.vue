@@ -1,6 +1,6 @@
 <template>
 <div 
-    class="h-content w-64 bg-gradient-to-b rounded-md px-8 py-3 shadow-default transition-all"
+    class="h-content w-60 bg-gradient-to-b rounded-md px-8 py-3 shadow-default transition-all"
     :class="{
         'from-h-5': disabled,
         'to-h-4': disabled,
@@ -12,7 +12,7 @@
         <span>{{ title }}</span>
     </div>
     <div class="w-full text-right font-lato text-4xl text-h11">
-        <input class="w-full h-full text-center bg-transparent caret-h6 focus:border-none focus:outline-none"
+        <input class="text-end w-full h-full bg-transparent caret-h6 focus:border-none focus:outline-none"
             :value="value"
             @input="$emit('update:value', ($event.target as HTMLInputElement)?.value)"
             :disabled="disabled"

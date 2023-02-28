@@ -21,7 +21,7 @@ export const useMealsStore = defineStore({
                     calories,
                     macros
                 }
-            }
+            } as FoodTotal
         },
         getMealTotal(foods: FoodTotal[], meal: Meal) {
             let macros = {
