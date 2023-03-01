@@ -15,7 +15,7 @@
             v-if="addMealModal"
             @close="closeAddMealModal()"
         >
-            <add-meal class="h-72 w-[75vw]">
+            <add-meal class="h-fit w-[75vw]">
                 
             </add-meal>
         </v-modal>

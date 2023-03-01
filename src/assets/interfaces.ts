@@ -18,7 +18,7 @@ export interface Food {
 
 export interface FoodOnMeal { 
     food: Food, 
-    quantity: number 
+    quantity: number,
 }
 
 export interface FoodTotal {

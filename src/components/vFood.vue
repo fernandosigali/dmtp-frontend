@@ -8,6 +8,7 @@
         <food-macro-nutrients
             :totalMacros="foodTotals.totals.macros"
             :proportionalMacros="foodTotals.food.food.macros"
+            class="basis-1/5 grow"
         ></food-macro-nutrients>
     </div>
 </template>

@@ -9,7 +9,7 @@
     @mouseup="backdropMouseupEvent($event)"
     >
     <div 
-        class="text-center bg-transparent h-fit w-fit transition-all"
+        class="text-center bg-transparent h-fit w-fit transition-all duration-150"
         :class="{
                     'max-h-0': !mounted,
                     'max-h-full': mounted,

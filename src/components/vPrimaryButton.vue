@@ -1,7 +1,7 @@
 <template>
     <div 
-        class="bg-gradient-to-b from-h10 to-h11 px-8 py-4 rounded-sm shadow-default font-lato cursor-pointer transition-transform"
-        :class="{'scale-95': pressing}"
+        class="bg-gradient-to-b from-h10 to-h11 px-8 py-4 rounded-sm shadow-default font-nunito cursor-pointer transition-transform"
+        :class="{'scale-[98%]': pressing}"
         @mousedown="pressButton($event)"
         @mouseup="confirmClick($event)"
         @mouseleave="releaseButton($event)"
